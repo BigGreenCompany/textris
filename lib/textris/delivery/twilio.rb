@@ -17,6 +17,10 @@ module Textris
           options[:media_url] = message.media_urls
         end
 
+        if message.callback_url
+          options[:status_callback] = message.callback_url
+        end
+
         client.messages.create(options)
       end
 
