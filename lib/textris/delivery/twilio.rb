@@ -21,7 +21,7 @@ module Textris
           options[:status_callback] = message.callback_url
         end
 
-        client.messages.create(options)
+        client.messages.create(**options)
       end
 
       private
